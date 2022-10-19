@@ -226,7 +226,7 @@
 
 % For elements of entry
 \newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{graytext} #1}}
+\newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{darktext} #1}}
 \newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
 \newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
 \newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text} #1}}
@@ -603,13 +603,16 @@
 }
 
 %-------------------------------------------------------------------------------
-%                ADITTIONS BY ME (CV Competence Matrix)
+%                ADITTIONS BY ME (CV Competence Matrix & more)
 %-------------------------------------------------------------------------------
 
 % Fonts
 \newcommand*{\cvmsectionstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\cvmheaderstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\scshape\color{darktext} #1}}
 \newcommand*{\cvmrowstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\color{text} #1}}
+\newcommand*{\entrykeyheaderstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{darktext} #1}}
+\newcommand*{\entrykeyelementstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\color{text} #1}}
+
 
 % Define an environment for cvmatrix
 \newenvironment{cvmatrix}{%
@@ -654,6 +657,17 @@ rectangle  ([xshift=\xfill*1em]path picture bounding box.north west);}]{};
 	\cvmrowstyle{#1} & \Stars{#2} & \cvmrowstyle{#3} & \cvmrowstyle{#4} \\
 }
 
+% Define command for a CV key(word) entry
+\newcommand*{\cventrykeywords}[2]{%
+\vspace{7pt}
+\entrykeyheaderstyle{Methods:} \newline
+\entrykeyelementstyle{#1}
+\newline
+\vspace{2pt}
+\entrykeyheaderstyle{Technologies:} \newline
+\entrykeyelementstyle{#2}
+\newline
+}
 
 
 %-------------------------------------------------------------------------------

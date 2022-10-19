@@ -2,4 +2,5 @@
 *.log
 *.aux
 *.fdb_latexmk
-
+*.ttf
+*.otf
