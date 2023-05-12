@@ -4,3 +4,7 @@
 *.fdb_latexmk
 *.ttf
 *.otf
+
+classic_cv/
+cover_letter/
+cv_danni_dromi.pdf
